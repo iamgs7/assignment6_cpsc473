@@ -1,0 +1,19 @@
+===========POST===============
+curl --silent --request POST \
+     --header 'Content-Type: application/json' \
+       --data '{ "call": "heads" }' \
+       'http://localhost:3000/flip' | python -m json.tool
+
+
+
+===========GET=================
+curl --silent --request GET \
+     --header 'Content-Type: application/json' \
+     'http://localhost:3000/stats' | python -m json.tool
+
+
+
+==========DELETE===============
+curl --silent --request DELETE \
+     --header 'Content-Type: application/json' \
+     'http://localhost:3000/stats' | python -m json.tool
